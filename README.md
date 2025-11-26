@@ -1,5 +1,9 @@
 # LLM-Council
 
+![Round Table Visual](./assets/roundtable.png)
+![UI Screenshot](./assets/ui_preview.png)
+
+
 # 🧙‍♂️ LLM High Council — Multi-Model Round-Table Intelligence System
 
 The **LLM High Council** is a multi-agent AI system where multiple powerful Large Language Models sit like a *round-table council*, each giving their own perspective. A final **Judge Model** evaluates all responses and produces the **best final verdict**, providing more accurate, reliable, and trustworthy reasoning.
@@ -82,9 +86,6 @@ npm run dev
 
 ## Open in browser:
 http://localhost:5173
-
-![Round Table Visual](./assets/roundtable.png)
-![UI Screenshot](./assets/ui_preview.png)
 
 
 
