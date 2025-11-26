@@ -1,7 +1,5 @@
 # LLM-Council
 
-![Round Table Visual](./assets/roundtable.png)
-![UI Screenshot](./assets/ui_preview.png)
 
 
 # 🧙‍♂️ LLM High Council — Multi-Model Round-Table Intelligence System
