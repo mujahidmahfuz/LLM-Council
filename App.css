@@ -1,0 +1,61 @@
+.container { 
+  max-width: 1200px; 
+  margin: 0 auto; 
+  padding: 20px; 
+  font-family: sans-serif; 
+}
+
+.input-area { 
+  display: flex; 
+  gap: 10px; 
+  margin-bottom: 30px; 
+}
+
+textarea { 
+  flex-grow: 1; 
+  height: 60px; 
+  padding: 10px; 
+}
+
+.grid { 
+  display: grid; 
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+  gap: 20px; 
+}
+
+.card { 
+  border: 1px solid #ddd; 
+  padding: 15px; 
+  border-radius: 8px; 
+  background: #f9f9f9; 
+  /* FIX: Force text color to be dark grey so it's visible on the light background */
+  color: #333; 
+}
+
+.card h3 { 
+  font-size: 0.9rem; 
+  color: #000; /* Darker header */
+  margin-top: 0; 
+  word-break: break-all; 
+  border-bottom: 1px solid #eee;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+}
+
+.card p { 
+  white-space: pre-wrap; 
+  color: #333; /* Explicitly set answer text color */
+}
+
+
+.verdict-card {
+  background-color: #e8f4fd;
+  border: 2px solid #2196f3;
+  border-radius: 12px;
+  padding: 25px;
+  margin-bottom: 30px;
+  color: #333;
+  box-shadow: 0 4px 12px rgba(33, 150, 243, 0.2);
+}
+.verdict-card h2 { margin-top: 0; color: #1565c0; }
+.verdict-card p { font-size: 1.1rem; line-height: 1.6; white-space: pre-wrap;}
