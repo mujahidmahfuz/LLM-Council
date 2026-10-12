@@ -46,7 +46,10 @@ def create_app(settings: Settings, client_factory: ClientFactory = httpx.AsyncCl
         if not settings.is_configured:
             raise HTTPException(
                 status_code=503,
-                detail="OpenRouter API key missing. Set OPENROUTER_API_KEY in backend/.env.",
+                detail=(
+                    "OpenRouter API key missing or still the placeholder. "
+                    "Set a real OPENROUTER_API_KEY in backend/.env."
+                ),
             )
         if len(request.prompt) > settings.max_prompt_chars:
             raise HTTPException(

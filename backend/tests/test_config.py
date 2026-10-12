@@ -7,6 +7,7 @@ import pytest
 from council.config import (
     DEFAULT_CHAIRMAN_MODEL,
     DEFAULT_COUNCIL_MODELS,
+    PLACEHOLDER_API_KEY,
     ConfigError,
     load_settings,
 )
@@ -29,6 +30,15 @@ def test_reads_both_api_key_variable_names() -> None:
 def test_preferred_key_name_wins() -> None:
     env = {"OPENROUTER_API_KEY": "new", "OPEN_ROUTER_KEY": "old"}
     assert load_settings(env).api_key == "new"
+
+
+def test_example_placeholder_is_not_a_key() -> None:
+    assert not load_settings({"OPENROUTER_API_KEY": PLACEHOLDER_API_KEY}).is_configured
+
+
+def test_placeholder_does_not_shadow_a_real_key_in_another_variable() -> None:
+    env = {"OPENROUTER_API_KEY": PLACEHOLDER_API_KEY, "OPEN_ROUTER_KEY": "real"}
+    assert load_settings(env).api_key == "real"
 
 
 def test_blank_key_counts_as_missing() -> None:

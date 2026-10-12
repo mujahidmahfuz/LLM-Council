@@ -30,6 +30,8 @@ DEFAULT_ALLOWED_ORIGINS: tuple[str, ...] = (
 
 OPENROUTER_BASE_URL = "https://openrouter.ai/api/v1"
 API_KEY_VARIABLES = ("OPENROUTER_API_KEY", "OPEN_ROUTER_KEY")
+# The value shipped in .env.example; a copied-but-unedited file must not count as a key.
+PLACEHOLDER_API_KEY = "sk-or-v1-your-key-here"
 
 
 class ConfigError(ValueError):
@@ -82,7 +84,14 @@ def _read_number(env: Mapping[str, str], name: str, default: float, *, minimum: 
 def load_settings(env: Mapping[str, str] | None = None) -> Settings:
     """Build immutable settings from `env` (defaults to the process environment)."""
     source = os.environ if env is None else env
-    api_key = next((source[n].strip() for n in API_KEY_VARIABLES if source.get(n, "").strip()), None)
+    api_key = next(
+        (
+            value
+            for value in (source.get(name, "").strip() for name in API_KEY_VARIABLES)
+            if value and value != PLACEHOLDER_API_KEY
+        ),
+        None,
+    )
     council_models = _split_list(source.get("COUNCIL_MODELS"), DEFAULT_COUNCIL_MODELS)
     if len(council_models) > MAX_COUNCIL_SIZE:
         raise ConfigError(
