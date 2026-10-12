@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { formatScore, shortName, splitModelId } from './format'
+import { describeAgreement, formatScore, shortName, splitModelId } from './format'
 
 describe('splitModelId', () => {
   it('separates vendor and name and drops the pricing tier', () => {
@@ -27,6 +27,21 @@ describe('shortName', () => {
     const result = shortName('v/a-very-long-model-name-indeed:free', 10)
     expect(result).toBe('a-very-lo…')
     expect(result).toHaveLength(10)
+  })
+})
+
+describe('describeAgreement', () => {
+  it.each([
+    [1, 'strong'],
+    [0.7, 'strong'],
+    [0.5, 'moderate'],
+    [0.3, 'moderate'],
+    [0.1, 'split'],
+    [-0.4, 'split'],
+    [null, null],
+    [undefined, null],
+  ])('describes %s as %s', (input, expected) => {
+    expect(describeAgreement(input)).toBe(expected)
   })
 })
 

@@ -32,6 +32,7 @@ class CouncilResult(BaseModel):
     reviews: list[ReviewOut]
     leaderboard: list[LeaderboardEntryOut]
     winner: str | None
+    agreement: float | None = None  # mean Kendall tau between reviewers, -1 to +1
     chairman: str
     council_verdict: str
     verdict_source: Literal["chairman", "fallback"]

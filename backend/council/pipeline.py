@@ -17,6 +17,7 @@ from .ranking import (
     LABEL_LETTERS,
     LeaderboardEntry,
     aggregate,
+    agreement,
     build_answer_messages,
     build_chairman_messages,
     build_review_messages,
@@ -86,13 +87,16 @@ async def run_council(
         reviews = list(
             await asyncio.gather(*(_review(call, a, answered, prompt, shuffler) for a in answered))
         )
-    leaderboard = aggregate([a.model for a in answered], [r.ranking for r in reviews if r.ranking])
+    valid_rankings = [r.ranking for r in reviews if r.ranking]
+    leaderboard = aggregate([a.model for a in answered], valid_rankings)
     winner = leaderboard[0].model if leaderboard[0].score is not None else None
+    consensus = agreement(valid_rankings)
     yield {
         "type": "reviews",
         "reviews": [asdict(r) for r in reviews],
         "leaderboard": [asdict(e) for e in leaderboard],
         "winner": winner,
+        "agreement": consensus,
     }
 
     yield {"type": "stage", "stage": "verdict", "models": [settings.chairman_model]}
@@ -105,6 +109,7 @@ async def run_council(
         "reviews": [asdict(r) for r in reviews],
         "leaderboard": [asdict(e) for e in leaderboard],
         "winner": winner,
+        "agreement": consensus,
         "chairman": settings.chairman_model,
         "council_verdict": verdict,
         "verdict_source": source,

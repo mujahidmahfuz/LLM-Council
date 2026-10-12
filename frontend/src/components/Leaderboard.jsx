@@ -1,4 +1,4 @@
-import { formatScore, splitModelId } from '../lib/format'
+import { describeAgreement, formatScore, splitModelId } from '../lib/format'
 
 function reviewSummary(reviews) {
   const counted = reviews.filter((review) => review.ranking.length > 0).length
@@ -6,9 +6,10 @@ function reviewSummary(reviews) {
 }
 
 /** Consensus ranking: how the members themselves rated each other. */
-export default function Leaderboard({ leaderboard, reviews, winner }) {
+export default function Leaderboard({ leaderboard, reviews, winner, agreement }) {
   if (leaderboard.length === 0) return null
   const hasScores = leaderboard.some((entry) => entry.score !== null)
+  const agreementLabel = describeAgreement(agreement)
   return (
     <section className="panel" aria-labelledby="leaderboard-title">
       <h2 id="leaderboard-title">Consensus ranking</h2>
@@ -17,6 +18,12 @@ export default function Leaderboard({ leaderboard, reviews, winner }) {
           ? `Each member ranked the others anonymously (never itself). ${reviewSummary(reviews)}.`
           : 'Peer review was skipped, so no ranking is available.'}
       </p>
+      {agreementLabel && (
+        <p className={`agreement agreement-${agreementLabel}`}>
+          Reviewer agreement: <strong>{agreementLabel}</strong> ({agreement.toFixed(2)}).
+          {agreementLabel === 'split' && ' The council is divided, so read the individual opinions before trusting one verdict.'}
+        </p>
+      )}
       <ol className="leaderboard">
         {leaderboard.map((entry, index) => {
           const { vendor, name } = splitModelId(entry.model)

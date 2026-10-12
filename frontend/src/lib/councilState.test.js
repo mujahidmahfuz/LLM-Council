@@ -72,6 +72,15 @@ describe('councilReducer', () => {
     expect(state.winner).toBe('a/one')
     expect(state.leaderboard).toHaveLength(1)
     expect(state.reviews).toHaveLength(1)
+    expect(state.agreement).toBeNull()
+  })
+
+  it('keeps the reviewer agreement from the reviews event and the final result', () => {
+    const afterReviews = run([
+      { type: 'reviews', reviews: [], leaderboard: [], winner: null, agreement: 0.5 },
+    ])
+    expect(afterReviews.agreement).toBe(0.5)
+    expect(run([{ type: 'complete', result: { ...result, agreement: 0.8 } }]).agreement).toBe(0.8)
   })
 
   it('complete fills in the verdict', () => {

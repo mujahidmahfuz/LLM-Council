@@ -213,6 +213,23 @@ button[type='submit']:disabled {
   font-size: 0.92rem;
 }
 
+.agreement {
+  margin: 0 0 14px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border-left: 4px solid var(--ok);
+  background: var(--surface-2);
+  font-size: 0.92rem;
+}
+
+.agreement-moderate {
+  border-left-color: var(--gold);
+}
+
+.agreement-split {
+  border-left-color: var(--bad);
+}
+
 .leaderboard {
   list-style: none;
   margin: 0;

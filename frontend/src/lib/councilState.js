@@ -7,6 +7,7 @@ export const initialState = {
   reviews: [],
   leaderboard: [],
   winner: null,
+  agreement: null,
   chairman: null,
   verdict: null,
   verdictSource: null,
@@ -38,6 +39,7 @@ export function councilReducer(state, action) {
         reviews: action.reviews,
         leaderboard: action.leaderboard,
         winner: action.winner,
+        agreement: action.agreement ?? null,
       }
     case 'complete': {
       const result = action.result
@@ -48,6 +50,7 @@ export function councilReducer(state, action) {
         reviews: result.reviews,
         leaderboard: result.leaderboard,
         winner: result.winner,
+        agreement: result.agreement ?? null,
         chairman: result.chairman,
         verdict: result.council_verdict,
         verdictSource: result.verdict_source,

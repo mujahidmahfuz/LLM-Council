@@ -27,6 +27,7 @@ async def test_full_council_ranks_by_consensus(settings: Settings) -> None:
     assert board["m2"]["score"] == pytest.approx(0.6667)
     assert all(e["votes"] == 3 for e in board.values())
     assert result["winner"] == "m1"
+    assert result["agreement"] == 1.0  # the scripted reviewers all share one opinion
     assert result["chairman"] == CHAIRMAN
     assert result["council_verdict"] == "FINAL VERDICT"
     assert result["verdict_source"] == "chairman"

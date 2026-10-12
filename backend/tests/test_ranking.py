@@ -2,11 +2,15 @@
 
 from __future__ import annotations
 
+import pytest
+
 from council.ranking import (
     LeaderboardEntry,
     aggregate,
+    agreement,
     build_chairman_messages,
     build_review_messages,
+    kendall_tau,
     parse_ranking,
 )
 
@@ -82,6 +86,38 @@ class TestAggregate:
 
     def test_single_item_ranking_scores_full(self) -> None:
         assert aggregate(["a"], [["a"]])[0].score == 1.0
+
+
+class TestAgreement:
+    def test_identical_rankings_agree_fully(self) -> None:
+        assert kendall_tau(["a", "b", "c"], ["a", "b", "c"]) == 1.0
+
+    def test_reversed_rankings_disagree_fully(self) -> None:
+        assert kendall_tau(["a", "b", "c"], ["c", "b", "a"]) == -1.0
+
+    def test_one_swap_in_three_items(self) -> None:
+        # pairs: ab ok, ac ok, bc flipped -> (2 - 1) / 3
+        assert kendall_tau(["a", "b", "c"], ["a", "c", "b"]) == pytest.approx(1 / 3)
+
+    def test_only_shared_items_are_compared(self) -> None:
+        # reviewers never rank themselves, so lists differ; compare on a, b only
+        assert kendall_tau(["x", "a", "b"], ["a", "b", "y"]) == 1.0
+
+    def test_fewer_than_two_shared_items_is_undefined(self) -> None:
+        assert kendall_tau(["a", "b"], ["b", "c"]) is None
+        assert kendall_tau([], ["a"]) is None
+
+    def test_agreement_is_the_mean_over_reviewer_pairs(self) -> None:
+        rankings = [["a", "b", "c"], ["a", "b", "c"], ["c", "b", "a"]]
+        # pairs: (1,2)=+1, (1,3)=-1, (2,3)=-1 -> mean -1/3
+        assert agreement(rankings) == pytest.approx(-0.3333, abs=1e-4)
+
+    def test_unanimous_council_scores_one(self) -> None:
+        assert agreement([["a", "b", "c"]] * 4) == 1.0
+
+    def test_agreement_needs_two_reviewers(self) -> None:
+        assert agreement([["a", "b", "c"]]) is None
+        assert agreement([]) is None
 
 
 class TestPrompts:

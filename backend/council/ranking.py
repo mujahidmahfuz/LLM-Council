@@ -110,6 +110,42 @@ def aggregate(
     )
 
 
+def kendall_tau(first: Sequence[str], second: Sequence[str]) -> float | None:
+    """Kendall's tau between two best-first rankings, over the items both contain.
+
+    +1 means the same order, -1 the reverse. None when fewer than two items are shared.
+    """
+    in_second = set(second)
+    shared = [item for item in first if item in in_second]
+    if len(shared) < 2:
+        return None
+    position_in_second = {item: place for place, item in enumerate(i for i in second if i in set(shared))}
+    concordant = discordant = 0
+    for index, left in enumerate(shared):
+        for right in shared[index + 1 :]:
+            if position_in_second[left] < position_in_second[right]:
+                concordant += 1
+            else:
+                discordant += 1
+    return (concordant - discordant) / (concordant + discordant)
+
+
+def agreement(rankings: Sequence[Sequence[str]]) -> float | None:
+    """How much the reviewers agree: mean pairwise Kendall tau, from -1 to +1.
+
+    Low agreement means the council is split, so the human should look at the
+    individual answers instead of trusting the single verdict. None if no pair
+    of reviewers ranked at least two of the same answers.
+    """
+    taus = [
+        tau
+        for index, first in enumerate(rankings)
+        for second in rankings[index + 1 :]
+        if (tau := kendall_tau(first, second)) is not None
+    ]
+    return round(sum(taus) / len(taus), 4) if taus else None
+
+
 def build_chairman_messages(
     question: str, ranked: Sequence[tuple[LeaderboardEntry, str]]
 ) -> list[dict[str, str]]:

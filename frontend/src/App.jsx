@@ -136,7 +136,12 @@ function App() {
         </section>
       )}
 
-      <Leaderboard leaderboard={state.leaderboard} reviews={state.reviews} winner={state.winner} />
+      <Leaderboard
+        leaderboard={state.leaderboard}
+        reviews={state.reviews}
+        winner={state.winner}
+        agreement={state.agreement}
+      />
       <Answers answers={state.answers} />
     </main>
   )
