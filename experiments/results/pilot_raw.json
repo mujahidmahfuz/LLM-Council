@@ -1,0 +1,154 @@
+{
+  "members": [
+    "google/gemma-4-31b-it:free",
+    "nvidia/nemotron-3-super-120b-a12b:free",
+    "dots-studio/dots-3-note-preview:free",
+    "apodex/apodex-1.1-mini:free",
+    "liquid/lfm-2.5-2.6b:free"
+  ],
+  "chairman": "nvidia/nemotron-3-ultra-550b-a55b:free",
+  "rows": [
+    {
+      "id": "Q1",
+      "topic": "Sampling",
+      "truth": "C",
+      "members": {
+        "google/gemma-4-31b-it:free": null,
+        "nvidia/nemotron-3-super-120b-a12b:free": "C",
+        "dots-studio/dots-3-note-preview:free": "C",
+        "apodex/apodex-1.1-mini:free": "C",
+        "liquid/lfm-2.5-2.6b:free": "C"
+      },
+      "leaderboard": [
+        {
+          "model": "nvidia/nemotron-3-super-120b-a12b:free",
+          "score": 0.8333,
+          "average_rank": 1.33,
+          "votes": 3
+        },
+        {
+          "model": "apodex/apodex-1.1-mini:free",
+          "score": 0.8333,
+          "average_rank": 1.33,
+          "votes": 3
+        },
+        {
+          "model": "dots-studio/dots-3-note-preview:free",
+          "score": 0.1667,
+          "average_rank": 2.67,
+          "votes": 3
+        },
+        {
+          "model": "liquid/lfm-2.5-2.6b:free",
+          "score": 0.1667,
+          "average_rank": 2.67,
+          "votes": 3
+        }
+      ],
+      "winner": "nvidia/nemotron-3-super-120b-a12b:free",
+      "chairman_letter": "C",
+      "verdict_source": "chairman",
+      "verdict": "Council member 1 provided the strongest answer because it concisely states the Nyquist criterion and correctly identifies 100\u202fHz as the only sampling rate above the required 80\u202fHz threshold.  \nANSWER: C  \nThe Nyquist theorem requires a sampling rate greater than twice the maximum signal frequency (2\u202f\u00d7\u202f40\u202fHz\u202f=\u202f80\u202fHz) to avoid aliasing, and among the options only 100\u202fHz satisfies this condition.",
+      "seconds": 49.8
+    },
+    {
+      "id": "Q2",
+      "topic": "Protocols",
+      "truth": "B",
+      "members": {
+        "google/gemma-4-31b-it:free": null,
+        "nvidia/nemotron-3-super-120b-a12b:free": "B",
+        "dots-studio/dots-3-note-preview:free": "B",
+        "apodex/apodex-1.1-mini:free": "B",
+        "liquid/lfm-2.5-2.6b:free": "B"
+      },
+      "leaderboard": [
+        {
+          "model": "nvidia/nemotron-3-super-120b-a12b:free",
+          "score": 0.8333,
+          "average_rank": 1.33,
+          "votes": 3
+        },
+        {
+          "model": "apodex/apodex-1.1-mini:free",
+          "score": 0.6667,
+          "average_rank": 1.67,
+          "votes": 3
+        },
+        {
+          "model": "dots-studio/dots-3-note-preview:free",
+          "score": 0.5,
+          "average_rank": 2.0,
+          "votes": 3
+        },
+        {
+          "model": "liquid/lfm-2.5-2.6b:free",
+          "score": 0.0,
+          "average_rank": 3.0,
+          "votes": 3
+        }
+      ],
+      "winner": "nvidia/nemotron-3-super-120b-a12b:free",
+      "chairman_letter": "B",
+      "verdict_source": "fallback",
+      "verdict": "ANSWER: B  \nMQTT (Message Queuing Telemetry Transport) is a lightweight publish/subscribe messaging protocol specifically designed for low\u2011bandwidth, high\u2011latency or unreliable networks commonly found in IoT devices.",
+      "seconds": 45.6
+    },
+    {
+      "id": "Q3",
+      "topic": "Power budget",
+      "truth": "A",
+      "error": "No council member could answer. google/gemma-4-31b-it:free: HTTP 429: rate limited; nvidia/nemotron-3-super-120b-a12b:free: HTTP 429: rate limited; dots-studio/dots-3-note-preview:free: HTTP 429: rate limited; apodex/apodex-1.1-mini:free: HTTP 429: rate limited; liquid/lfm-2.5-2.6b:free: HTTP 429: rate limited",
+      "seconds": 22.2
+    },
+    {
+      "id": "Q4",
+      "topic": "Data cleaning",
+      "truth": "B",
+      "error": "No council member could answer. google/gemma-4-31b-it:free: HTTP 429: rate limited; nvidia/nemotron-3-super-120b-a12b:free: HTTP 429: rate limited; dots-studio/dots-3-note-preview:free: HTTP 429: rate limited; apodex/apodex-1.1-mini:free: HTTP 429: rate limited; liquid/lfm-2.5-2.6b:free: HTTP 429: rate limited",
+      "seconds": 22.1
+    },
+    {
+      "id": "Q5",
+      "topic": "Wireless",
+      "truth": "C",
+      "error": "No council member could answer. google/gemma-4-31b-it:free: HTTP 429: rate limited; nvidia/nemotron-3-super-120b-a12b:free: HTTP 429: rate limited; dots-studio/dots-3-note-preview:free: HTTP 429: rate limited; apodex/apodex-1.1-mini:free: HTTP 429: rate limited; liquid/lfm-2.5-2.6b:free: HTTP 429: rate limited",
+      "seconds": 22.1
+    },
+    {
+      "id": "Q6",
+      "topic": "Bandwidth",
+      "truth": "A",
+      "error": "No council member could answer. google/gemma-4-31b-it:free: HTTP 429: rate limited; nvidia/nemotron-3-super-120b-a12b:free: HTTP 429: rate limited; dots-studio/dots-3-note-preview:free: HTTP 429: rate limited; apodex/apodex-1.1-mini:free: HTTP 429: rate limited; liquid/lfm-2.5-2.6b:free: HTTP 429: rate limited",
+      "seconds": 22.1
+    },
+    {
+      "id": "Q7",
+      "topic": "Radio power",
+      "truth": "B",
+      "error": "No council member could answer. google/gemma-4-31b-it:free: HTTP 429: rate limited; nvidia/nemotron-3-super-120b-a12b:free: HTTP 429: rate limited; dots-studio/dots-3-note-preview:free: HTTP 429: rate limited; apodex/apodex-1.1-mini:free: HTTP 429: rate limited; liquid/lfm-2.5-2.6b:free: HTTP 429: rate limited",
+      "seconds": 22.3
+    },
+    {
+      "id": "Q8",
+      "topic": "Signal strength",
+      "truth": "B",
+      "error": "No council member could answer. google/gemma-4-31b-it:free: HTTP 429: rate limited; nvidia/nemotron-3-super-120b-a12b:free: HTTP 429: rate limited; dots-studio/dots-3-note-preview:free: HTTP 429: rate limited; apodex/apodex-1.1-mini:free: HTTP 429: rate limited; liquid/lfm-2.5-2.6b:free: HTTP 429: rate limited",
+      "seconds": 22.2
+    },
+    {
+      "id": "Q9",
+      "topic": "ADC",
+      "truth": "A",
+      "error": "No council member could answer. google/gemma-4-31b-it:free: HTTP 429: rate limited; nvidia/nemotron-3-super-120b-a12b:free: HTTP 429: rate limited; dots-studio/dots-3-note-preview:free: HTTP 429: rate limited; apodex/apodex-1.1-mini:free: HTTP 429: rate limited; liquid/lfm-2.5-2.6b:free: HTTP 429: rate limited",
+      "seconds": 22.2
+    },
+    {
+      "id": "Q10",
+      "topic": "Edge computing",
+      "truth": "B",
+      "error": "No council member could answer. google/gemma-4-31b-it:free: HTTP 429: rate limited; nvidia/nemotron-3-super-120b-a12b:free: HTTP 429: rate limited; dots-studio/dots-3-note-preview:free: HTTP 429: rate limited; apodex/apodex-1.1-mini:free: HTTP 429: rate limited; liquid/lfm-2.5-2.6b:free: HTTP 429: rate limited",
+      "seconds": 22.1
+    }
+  ]
+}

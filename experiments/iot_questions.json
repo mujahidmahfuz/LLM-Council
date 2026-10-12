@@ -1,0 +1,82 @@
+[
+  {
+    "id": "Q1",
+    "topic": "Sampling",
+    "question": "A vibration sensor signal contains frequency components up to 40 Hz. Which sampling rate lets the signal be reconstructed without aliasing?",
+    "options": {"A": "40 Hz", "B": "50 Hz", "C": "100 Hz", "D": "20 Hz"},
+    "answer": "C"
+  },
+  {
+    "id": "Q2",
+    "topic": "Protocols",
+    "question": "Which protocol is a lightweight publish/subscribe messaging protocol designed for constrained IoT devices and unreliable networks?",
+    "options": {"A": "HTTP/1.1", "B": "MQTT", "C": "FTP", "D": "SMTP"},
+    "answer": "B"
+  },
+  {
+    "id": "Q3",
+    "topic": "Power budget",
+    "question": "A battery-powered sensor draws 20 mA while active for 1 second every minute, and 10 microamps while asleep the rest of the time. What is its average current?",
+    "options": {"A": "0.34 mA", "B": "3.4 mA", "C": "20 mA", "D": "0.034 mA"},
+    "answer": "A"
+  },
+  {
+    "id": "Q4",
+    "topic": "Data cleaning",
+    "question": "A temperature sensor reports 21.0, 21.1, 21.0, 35.8, 21.2 (degrees C). Which summary statistic is least affected by the 35.8 outlier?",
+    "options": {"A": "Mean", "B": "Median", "C": "Maximum", "D": "Sum"},
+    "answer": "B"
+  },
+  {
+    "id": "Q5",
+    "topic": "Wireless",
+    "question": "Which technology offers the longest range (kilometres) at a very low data rate, suited to sparse battery-powered field sensors?",
+    "options": {"A": "Wi-Fi", "B": "Bluetooth Classic", "C": "LoRa", "D": "Zigbee"},
+    "answer": "C"
+  },
+  {
+    "id": "Q6",
+    "topic": "Bandwidth",
+    "question": "A device sends a 200-byte payload every 10 seconds. How much data does it send per day?",
+    "options": {"A": "About 1.73 MB", "B": "About 17.3 MB", "C": "About 0.173 MB", "D": "About 172.8 MB"},
+    "answer": "A"
+  },
+  {
+    "id": "Q7",
+    "topic": "Radio power",
+    "question": "A radio transmits at 14 dBm. Approximately how many milliwatts is that?",
+    "options": {"A": "14 mW", "B": "25 mW", "C": "140 mW", "D": "2.5 mW"},
+    "answer": "B"
+  },
+  {
+    "id": "Q8",
+    "topic": "Signal strength",
+    "question": "Two receivers report RSSI of -60 dBm and -90 dBm. Which statement is correct?",
+    "options": {
+      "A": "-90 dBm is 30 times stronger than -60 dBm",
+      "B": "-60 dBm is 1000 times stronger in power than -90 dBm",
+      "C": "-60 dBm is 30 times stronger in power than -90 dBm",
+      "D": "Both signals have equal power"
+    },
+    "answer": "B"
+  },
+  {
+    "id": "Q9",
+    "topic": "ADC",
+    "question": "A 12-bit ADC uses a 3.3 V reference. What is the approximate voltage step (1 LSB)?",
+    "options": {"A": "0.806 mV", "B": "3.3 mV", "C": "0.0806 mV", "D": "1.65 mV"},
+    "answer": "A"
+  },
+  {
+    "id": "Q10",
+    "topic": "Edge computing",
+    "question": "What is the main benefit of running anomaly detection on an edge gateway instead of sending all raw data to the cloud?",
+    "options": {
+      "A": "Higher latency",
+      "B": "Lower latency and less bandwidth use",
+      "C": "Larger sensors",
+      "D": "Higher cloud storage cost"
+    },
+    "answer": "B"
+  }
+]

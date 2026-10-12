@@ -1,0 +1,24 @@
+{
+  "questions_scored": 2,
+  "questions_failed": 8,
+  "single_model_accuracy": {
+    "google/gemma-4-31b-it:free": 0.0,
+    "nvidia/nemotron-3-super-120b-a12b:free": 1.0,
+    "dots-studio/dots-3-note-preview:free": 1.0,
+    "apodex/apodex-1.1-mini:free": 1.0,
+    "liquid/lfm-2.5-2.6b:free": 1.0
+  },
+  "single_model_answered": {
+    "google/gemma-4-31b-it:free": 0,
+    "nvidia/nemotron-3-super-120b-a12b:free": 2,
+    "dots-studio/dots-3-note-preview:free": 2,
+    "apodex/apodex-1.1-mini:free": 2,
+    "liquid/lfm-2.5-2.6b:free": 2
+  },
+  "single_model_mean": 0.8,
+  "single_model_best": 1.0,
+  "majority_vote": 1.0,
+  "council_winner": 1.0,
+  "chairman": 1.0,
+  "mean_seconds_per_question": 47.7
+}
