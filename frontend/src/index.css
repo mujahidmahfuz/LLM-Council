@@ -1,0 +1,78 @@
+:root {
+  --bg: #f6f7fb;
+  --surface: #ffffff;
+  --surface-2: #eef1f8;
+  --text: #1c2333;
+  --muted: #5d6679;
+  --border: #d9deea;
+  --accent: #3b5bdb;
+  --accent-text: #ffffff;
+  --gold: #d9a400;
+  --ok: #2b9348;
+  --bad: #d62839;
+  --warn-bg: #fff4d6;
+
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.55;
+  color: var(--text);
+  background: var(--bg);
+  color-scheme: light dark;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #11141d;
+    --surface: #1a1f2d;
+    --surface-2: #232a3d;
+    --text: #e7eaf3;
+    --muted: #9aa3b8;
+    --border: #2f374d;
+    --accent: #7c93ff;
+    --accent-text: #0e1220;
+    --gold: #f2c230;
+    --ok: #52c76f;
+    --bad: #ff6b7a;
+    --warn-bg: #3a3014;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: var(--bg);
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+  margin: 0;
+}
+
+button,
+textarea,
+input {
+  font: inherit;
+}
+
+:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
