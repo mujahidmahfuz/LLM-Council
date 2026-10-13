@@ -98,57 +98,504 @@
       "id": "Q3",
       "topic": "Power budget",
       "truth": "A",
-      "error": "No council member could answer. google/gemma-4-31b-it:free: HTTP 429: rate limited; nvidia/nemotron-3-super-120b-a12b:free: HTTP 429: rate limited; dots-studio/dots-3-note-preview:free: HTTP 429: rate limited; apodex/apodex-1.1-mini:free: HTTP 429: rate limited; liquid/lfm-2.5-2.6b:free: HTTP 429: rate limited",
-      "seconds": 22.2
+      "members": {
+        "google/gemma-4-31b-it:free": "A",
+        "nvidia/nemotron-3-super-120b-a12b:free": "A",
+        "dots-studio/dots-3-note-preview:free": null,
+        "apodex/apodex-1.1-mini:free": "A",
+        "liquid/lfm-2.5-2.6b:free": "A"
+      },
+      "leaderboard": [
+        {
+          "model": "liquid/lfm-2.5-2.6b:free",
+          "score": 1.0,
+          "average_rank": 1.0,
+          "votes": 2
+        },
+        {
+          "model": "nvidia/nemotron-3-super-120b-a12b:free",
+          "score": 0.75,
+          "average_rank": 1.5,
+          "votes": 2
+        },
+        {
+          "model": "apodex/apodex-1.1-mini:free",
+          "score": 0.5,
+          "average_rank": 2.0,
+          "votes": 2
+        },
+        {
+          "model": "google/gemma-4-31b-it:free",
+          "score": 0.0,
+          "average_rank": 3.0,
+          "votes": 3
+        }
+      ],
+      "reviews": [
+        {
+          "reviewer": "google/gemma-4-31b-it:free",
+          "ranking": [],
+          "error": "HTTP 429: rate limited"
+        },
+        {
+          "reviewer": "nvidia/nemotron-3-super-120b-a12b:free",
+          "ranking": [
+            "liquid/lfm-2.5-2.6b:free",
+            "apodex/apodex-1.1-mini:free",
+            "google/gemma-4-31b-it:free"
+          ],
+          "error": null
+        },
+        {
+          "reviewer": "apodex/apodex-1.1-mini:free",
+          "ranking": [
+            "liquid/lfm-2.5-2.6b:free",
+            "nvidia/nemotron-3-super-120b-a12b:free",
+            "google/gemma-4-31b-it:free"
+          ],
+          "error": null
+        },
+        {
+          "reviewer": "liquid/lfm-2.5-2.6b:free",
+          "ranking": [
+            "nvidia/nemotron-3-super-120b-a12b:free",
+            "apodex/apodex-1.1-mini:free",
+            "google/gemma-4-31b-it:free"
+          ],
+          "error": null
+        }
+      ],
+      "agreement": 1.0,
+      "winner": "liquid/lfm-2.5-2.6b:free",
+      "chairman_letter": "A",
+      "verdict_source": "chairman",
+      "verdict": "Member 1's answer was strongest because it clearly and accurately calculated the average current with proper unit conversion and rounding.\n\nANSWER: A\nThe average current is (20\u202fmA \u00d7 1\u202fs + 0.01\u202fmA \u00d7 59\u202fs) / 60\u202fs \u2248 0.343\u202fmA, which rounds to 0.34\u202fmA.",
+      "seconds": 68.2
     },
     {
       "id": "Q4",
       "topic": "Data cleaning",
       "truth": "B",
-      "error": "No council member could answer. google/gemma-4-31b-it:free: HTTP 429: rate limited; nvidia/nemotron-3-super-120b-a12b:free: HTTP 429: rate limited; dots-studio/dots-3-note-preview:free: HTTP 429: rate limited; apodex/apodex-1.1-mini:free: HTTP 429: rate limited; liquid/lfm-2.5-2.6b:free: HTTP 429: rate limited",
-      "seconds": 22.1
+      "members": {
+        "google/gemma-4-31b-it:free": "B",
+        "nvidia/nemotron-3-super-120b-a12b:free": "B",
+        "dots-studio/dots-3-note-preview:free": "B",
+        "apodex/apodex-1.1-mini:free": "B",
+        "liquid/lfm-2.5-2.6b:free": "B"
+      },
+      "leaderboard": [
+        {
+          "model": "google/gemma-4-31b-it:free",
+          "score": 0.9167,
+          "average_rank": 1.25,
+          "votes": 4
+        },
+        {
+          "model": "nvidia/nemotron-3-super-120b-a12b:free",
+          "score": 0.7778,
+          "average_rank": 1.67,
+          "votes": 3
+        },
+        {
+          "model": "apodex/apodex-1.1-mini:free",
+          "score": 0.4444,
+          "average_rank": 2.67,
+          "votes": 3
+        },
+        {
+          "model": "dots-studio/dots-3-note-preview:free",
+          "score": 0.2222,
+          "average_rank": 3.33,
+          "votes": 3
+        },
+        {
+          "model": "liquid/lfm-2.5-2.6b:free",
+          "score": 0.0,
+          "average_rank": 4.0,
+          "votes": 3
+        }
+      ],
+      "reviews": [
+        {
+          "reviewer": "google/gemma-4-31b-it:free",
+          "ranking": [],
+          "error": "HTTP 429: rate limited"
+        },
+        {
+          "reviewer": "nvidia/nemotron-3-super-120b-a12b:free",
+          "ranking": [
+            "google/gemma-4-31b-it:free",
+            "apodex/apodex-1.1-mini:free",
+            "dots-studio/dots-3-note-preview:free",
+            "liquid/lfm-2.5-2.6b:free"
+          ],
+          "error": null
+        },
+        {
+          "reviewer": "dots-studio/dots-3-note-preview:free",
+          "ranking": [
+            "google/gemma-4-31b-it:free",
+            "nvidia/nemotron-3-super-120b-a12b:free",
+            "apodex/apodex-1.1-mini:free",
+            "liquid/lfm-2.5-2.6b:free"
+          ],
+          "error": null
+        },
+        {
+          "reviewer": "apodex/apodex-1.1-mini:free",
+          "ranking": [
+            "nvidia/nemotron-3-super-120b-a12b:free",
+            "google/gemma-4-31b-it:free",
+            "dots-studio/dots-3-note-preview:free",
+            "liquid/lfm-2.5-2.6b:free"
+          ],
+          "error": null
+        },
+        {
+          "reviewer": "liquid/lfm-2.5-2.6b:free",
+          "ranking": [
+            "google/gemma-4-31b-it:free",
+            "nvidia/nemotron-3-super-120b-a12b:free",
+            "apodex/apodex-1.1-mini:free",
+            "dots-studio/dots-3-note-preview:free"
+          ],
+          "error": null
+        }
+      ],
+      "agreement": 0.7778,
+      "winner": "google/gemma-4-31b-it:free",
+      "chairman_letter": "B",
+      "verdict_source": "chairman",
+      "verdict": "Council member 1's answer was strongest because it correctly identifies the median as a resistant statistic and clearly explains that it depends on the middle value of a sorted list rather than the magnitude of extreme values, without any inaccuracies.\n\nANSWER: B  \nThe median (21.1\u202f\u00b0C) is the middle value of the ordered data and is minimally affected by the 35.8\u202f\u00b0C outlier, whereas the mean, sum, and maximum all change substantially because they incorporate the magnitude of every observation.",
+      "seconds": 83.5
     },
     {
       "id": "Q5",
       "topic": "Wireless",
       "truth": "C",
-      "error": "No council member could answer. google/gemma-4-31b-it:free: HTTP 429: rate limited; nvidia/nemotron-3-super-120b-a12b:free: HTTP 429: rate limited; dots-studio/dots-3-note-preview:free: HTTP 429: rate limited; apodex/apodex-1.1-mini:free: HTTP 429: rate limited; liquid/lfm-2.5-2.6b:free: HTTP 429: rate limited",
-      "seconds": 22.1
+      "members": {
+        "google/gemma-4-31b-it:free": null,
+        "nvidia/nemotron-3-super-120b-a12b:free": "C",
+        "dots-studio/dots-3-note-preview:free": "C",
+        "apodex/apodex-1.1-mini:free": "C",
+        "liquid/lfm-2.5-2.6b:free": "C"
+      },
+      "leaderboard": [
+        {
+          "model": "nvidia/nemotron-3-super-120b-a12b:free",
+          "score": 0.8333,
+          "average_rank": 1.33,
+          "votes": 3
+        },
+        {
+          "model": "apodex/apodex-1.1-mini:free",
+          "score": 0.8333,
+          "average_rank": 1.33,
+          "votes": 3
+        },
+        {
+          "model": "liquid/lfm-2.5-2.6b:free",
+          "score": 0.3333,
+          "average_rank": 2.33,
+          "votes": 3
+        },
+        {
+          "model": "dots-studio/dots-3-note-preview:free",
+          "score": 0.0,
+          "average_rank": 3.0,
+          "votes": 3
+        }
+      ],
+      "reviews": [
+        {
+          "reviewer": "nvidia/nemotron-3-super-120b-a12b:free",
+          "ranking": [
+            "apodex/apodex-1.1-mini:free",
+            "liquid/lfm-2.5-2.6b:free",
+            "dots-studio/dots-3-note-preview:free"
+          ],
+          "error": null
+        },
+        {
+          "reviewer": "dots-studio/dots-3-note-preview:free",
+          "ranking": [
+            "apodex/apodex-1.1-mini:free",
+            "nvidia/nemotron-3-super-120b-a12b:free",
+            "liquid/lfm-2.5-2.6b:free"
+          ],
+          "error": null
+        },
+        {
+          "reviewer": "apodex/apodex-1.1-mini:free",
+          "ranking": [
+            "nvidia/nemotron-3-super-120b-a12b:free",
+            "liquid/lfm-2.5-2.6b:free",
+            "dots-studio/dots-3-note-preview:free"
+          ],
+          "error": null
+        },
+        {
+          "reviewer": "liquid/lfm-2.5-2.6b:free",
+          "ranking": [
+            "nvidia/nemotron-3-super-120b-a12b:free",
+            "apodex/apodex-1.1-mini:free",
+            "dots-studio/dots-3-note-preview:free"
+          ],
+          "error": null
+        }
+      ],
+      "agreement": 0.6667,
+      "winner": "nvidia/nemotron-3-super-120b-a12b:free",
+      "chairman_letter": "C",
+      "verdict_source": "chairman",
+      "verdict": "Member 2's answer was strongest because it not only correctly identifies LoRa but also explicitly contrasts it with the other options and highlights key advantages like unlicensed spectrum operation and minimal power consumption.\n\nANSWER: C\nLoRa (Long Range) is purpose-built for low-power wide-area networks, delivering multi-kilometre range at very low data rates (0.3\u201350 kbps) while consuming minimal power, making it ideal for sparse, battery-powered field sensors that transmit infrequently. Wi-Fi, Bluetooth Classic, and Zigbee are optimized for higher data rates over much shorter distances (typically \u2264100 m) and cannot match LoRa's combination of extreme range and ultra-low energy per bit.",
+      "seconds": 49.4
     },
     {
       "id": "Q6",
       "topic": "Bandwidth",
       "truth": "A",
-      "error": "No council member could answer. google/gemma-4-31b-it:free: HTTP 429: rate limited; nvidia/nemotron-3-super-120b-a12b:free: HTTP 429: rate limited; dots-studio/dots-3-note-preview:free: HTTP 429: rate limited; apodex/apodex-1.1-mini:free: HTTP 429: rate limited; liquid/lfm-2.5-2.6b:free: HTTP 429: rate limited",
-      "seconds": 22.1
+      "members": {
+        "google/gemma-4-31b-it:free": null,
+        "nvidia/nemotron-3-super-120b-a12b:free": "A",
+        "dots-studio/dots-3-note-preview:free": "A",
+        "apodex/apodex-1.1-mini:free": "A",
+        "liquid/lfm-2.5-2.6b:free": "A"
+      },
+      "leaderboard": [
+        {
+          "model": "nvidia/nemotron-3-super-120b-a12b:free",
+          "score": 0.8333,
+          "average_rank": 1.33,
+          "votes": 3
+        },
+        {
+          "model": "liquid/lfm-2.5-2.6b:free",
+          "score": 0.6667,
+          "average_rank": 1.67,
+          "votes": 3
+        },
+        {
+          "model": "apodex/apodex-1.1-mini:free",
+          "score": 0.5,
+          "average_rank": 2.0,
+          "votes": 3
+        },
+        {
+          "model": "dots-studio/dots-3-note-preview:free",
+          "score": 0.0,
+          "average_rank": 3.0,
+          "votes": 3
+        }
+      ],
+      "reviews": [
+        {
+          "reviewer": "nvidia/nemotron-3-super-120b-a12b:free",
+          "ranking": [
+            "liquid/lfm-2.5-2.6b:free",
+            "apodex/apodex-1.1-mini:free",
+            "dots-studio/dots-3-note-preview:free"
+          ],
+          "error": null
+        },
+        {
+          "reviewer": "dots-studio/dots-3-note-preview:free",
+          "ranking": [
+            "nvidia/nemotron-3-super-120b-a12b:free",
+            "liquid/lfm-2.5-2.6b:free",
+            "apodex/apodex-1.1-mini:free"
+          ],
+          "error": null
+        },
+        {
+          "reviewer": "apodex/apodex-1.1-mini:free",
+          "ranking": [
+            "nvidia/nemotron-3-super-120b-a12b:free",
+            "liquid/lfm-2.5-2.6b:free",
+            "dots-studio/dots-3-note-preview:free"
+          ],
+          "error": null
+        },
+        {
+          "reviewer": "liquid/lfm-2.5-2.6b:free",
+          "ranking": [
+            "apodex/apodex-1.1-mini:free",
+            "nvidia/nemotron-3-super-120b-a12b:free",
+            "dots-studio/dots-3-note-preview:free"
+          ],
+          "error": null
+        }
+      ],
+      "agreement": 0.6667,
+      "winner": "nvidia/nemotron-3-super-120b-a12b:free",
+      "chairman_letter": "A",
+      "verdict_source": "chairman",
+      "verdict": "Member 1's answer was strongest because it earned the highest peer-review score (0.83) and presented a clear, correct calculation.\n\nANSWER: A\nThe device transmits 200 bytes every 10 seconds, yielding 8,640 transmissions per day (86,400 seconds \u00f7 10). Multiplying gives 1,728,000 bytes, which is approximately 1.73 MB using 1 MB = 1,000,000 bytes.",
+      "seconds": 75.7
     },
     {
       "id": "Q7",
       "topic": "Radio power",
       "truth": "B",
-      "error": "No council member could answer. google/gemma-4-31b-it:free: HTTP 429: rate limited; nvidia/nemotron-3-super-120b-a12b:free: HTTP 429: rate limited; dots-studio/dots-3-note-preview:free: HTTP 429: rate limited; apodex/apodex-1.1-mini:free: HTTP 429: rate limited; liquid/lfm-2.5-2.6b:free: HTTP 429: rate limited",
-      "seconds": 22.3
+      "members": {
+        "google/gemma-4-31b-it:free": null,
+        "nvidia/nemotron-3-super-120b-a12b:free": "B",
+        "dots-studio/dots-3-note-preview:free": "B",
+        "apodex/apodex-1.1-mini:free": "B",
+        "liquid/lfm-2.5-2.6b:free": "B"
+      },
+      "leaderboard": [
+        {
+          "model": "liquid/lfm-2.5-2.6b:free",
+          "score": 1.0,
+          "average_rank": 1.0,
+          "votes": 3
+        },
+        {
+          "model": "apodex/apodex-1.1-mini:free",
+          "score": 0.6667,
+          "average_rank": 1.67,
+          "votes": 3
+        },
+        {
+          "model": "nvidia/nemotron-3-super-120b-a12b:free",
+          "score": 0.3333,
+          "average_rank": 2.33,
+          "votes": 3
+        },
+        {
+          "model": "dots-studio/dots-3-note-preview:free",
+          "score": 0.0,
+          "average_rank": 3.0,
+          "votes": 3
+        }
+      ],
+      "reviews": [
+        {
+          "reviewer": "nvidia/nemotron-3-super-120b-a12b:free",
+          "ranking": [
+            "liquid/lfm-2.5-2.6b:free",
+            "apodex/apodex-1.1-mini:free",
+            "dots-studio/dots-3-note-preview:free"
+          ],
+          "error": null
+        },
+        {
+          "reviewer": "dots-studio/dots-3-note-preview:free",
+          "ranking": [
+            "liquid/lfm-2.5-2.6b:free",
+            "apodex/apodex-1.1-mini:free",
+            "nvidia/nemotron-3-super-120b-a12b:free"
+          ],
+          "error": null
+        },
+        {
+          "reviewer": "apodex/apodex-1.1-mini:free",
+          "ranking": [
+            "liquid/lfm-2.5-2.6b:free",
+            "nvidia/nemotron-3-super-120b-a12b:free",
+            "dots-studio/dots-3-note-preview:free"
+          ],
+          "error": null
+        },
+        {
+          "reviewer": "liquid/lfm-2.5-2.6b:free",
+          "ranking": [
+            "apodex/apodex-1.1-mini:free",
+            "nvidia/nemotron-3-super-120b-a12b:free",
+            "dots-studio/dots-3-note-preview:free"
+          ],
+          "error": null
+        }
+      ],
+      "agreement": 1.0,
+      "winner": "liquid/lfm-2.5-2.6b:free",
+      "chairman_letter": "B",
+      "verdict_source": "chairman",
+      "verdict": "Member 1's answer was strongest because it clearly states the conversion formula and walks through the calculation step by step.\n\nANSWER: B\nTo convert from dBm to milliwatts, use the formula P(mW) = 10^(P(dBm)/10). For 14 dBm, this is 10^(1.4) \u2248 25.1 mW, making 25 mW the closest choice.",
+      "seconds": 46.3
     },
     {
       "id": "Q8",
       "topic": "Signal strength",
       "truth": "B",
-      "error": "No council member could answer. google/gemma-4-31b-it:free: HTTP 429: rate limited; nvidia/nemotron-3-super-120b-a12b:free: HTTP 429: rate limited; dots-studio/dots-3-note-preview:free: HTTP 429: rate limited; apodex/apodex-1.1-mini:free: HTTP 429: rate limited; liquid/lfm-2.5-2.6b:free: HTTP 429: rate limited",
-      "seconds": 22.2
-    },
-    {
-      "id": "Q9",
-      "topic": "ADC",
-      "truth": "A",
-      "error": "No council member could answer. google/gemma-4-31b-it:free: HTTP 429: rate limited; nvidia/nemotron-3-super-120b-a12b:free: HTTP 429: rate limited; dots-studio/dots-3-note-preview:free: HTTP 429: rate limited; apodex/apodex-1.1-mini:free: HTTP 429: rate limited; liquid/lfm-2.5-2.6b:free: HTTP 429: rate limited",
-      "seconds": 22.2
-    },
-    {
-      "id": "Q10",
-      "topic": "Edge computing",
-      "truth": "B",
-      "error": "No council member could answer. google/gemma-4-31b-it:free: HTTP 429: rate limited; nvidia/nemotron-3-super-120b-a12b:free: HTTP 429: rate limited; dots-studio/dots-3-note-preview:free: HTTP 429: rate limited; apodex/apodex-1.1-mini:free: HTTP 429: rate limited; liquid/lfm-2.5-2.6b:free: HTTP 429: rate limited",
-      "seconds": 22.1
+      "members": {
+        "google/gemma-4-31b-it:free": null,
+        "nvidia/nemotron-3-super-120b-a12b:free": "B",
+        "dots-studio/dots-3-note-preview:free": "B",
+        "apodex/apodex-1.1-mini:free": "B",
+        "liquid/lfm-2.5-2.6b:free": "B"
+      },
+      "leaderboard": [
+        {
+          "model": "nvidia/nemotron-3-super-120b-a12b:free",
+          "score": 0.6667,
+          "average_rank": 1.67,
+          "votes": 3
+        },
+        {
+          "model": "dots-studio/dots-3-note-preview:free",
+          "score": 0.6667,
+          "average_rank": 1.67,
+          "votes": 3
+        },
+        {
+          "model": "apodex/apodex-1.1-mini:free",
+          "score": 0.5,
+          "average_rank": 2.0,
+          "votes": 3
+        },
+        {
+          "model": "liquid/lfm-2.5-2.6b:free",
+          "score": 0.1667,
+          "average_rank": 2.67,
+          "votes": 3
+        }
+      ],
+      "reviews": [
+        {
+          "reviewer": "nvidia/nemotron-3-super-120b-a12b:free",
+          "ranking": [
+            "dots-studio/dots-3-note-preview:free",
+            "apodex/apodex-1.1-mini:free",
+            "liquid/lfm-2.5-2.6b:free"
+          ],
+          "error": null
+        },
+        {
+          "reviewer": "dots-studio/dots-3-note-preview:free",
+          "ranking": [
+            "nvidia/nemotron-3-super-120b-a12b:free",
+            "liquid/lfm-2.5-2.6b:free",
+            "apodex/apodex-1.1-mini:free"
+          ],
+          "error": null
+        },
+        {
+          "reviewer": "apodex/apodex-1.1-mini:free",
+          "ranking": [
+            "nvidia/nemotron-3-super-120b-a12b:free",
+            "dots-studio/dots-3-note-preview:free",
+            "liquid/lfm-2.5-2.6b:free"
+          ],
+          "error": null
+        },
+        {
+          "reviewer": "liquid/lfm-2.5-2.6b:free",
+          "ranking": [
+            "apodex/apodex-1.1-mini:free",
+            "dots-studio/dots-3-note-preview:free",
+            "nvidia/nemotron-3-super-120b-a12b:free"
+          ],
+          "error": null
+        }
+      ],
+      "agreement": -0.3333,
+      "winner": "nvidia/nemotron-3-super-120b-a12b:free",
+      "chairman_letter": "B",
+      "verdict_source": "fallback",
+      "verdict": "ANSWER: B  \nThe power ratio corresponding to a 30\u202fdB difference is 10^(30/10) = 1000, so the signal at \u201360\u202fdBm has 1000 times the power of the signal at \u201390\u202fdBm.",
+      "seconds": 88.3
     }
   ]
 }
